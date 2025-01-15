@@ -7,7 +7,6 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { getCarTypes } from "@/lib/service";
-import ky from "ky";
 
 export default async function Home() {
   const carTypes = await getCarTypes().json();

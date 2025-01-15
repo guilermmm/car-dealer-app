@@ -8,8 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getCarsByModelAndYear, getCarTypes, CarModel } from "@/lib/service";
-import { getYears, googleSearchLink } from "@/lib/utils";
+import { getCarTypes } from "@/lib/service";
+import { getYears } from "@/lib/utils";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -17,8 +17,8 @@ export async function generateStaticParams() {
   const carTypes = await getCarTypes().json();
 
   const paths = getYears()
-    .map((year) => {
-      return carTypes.Results.map((car) => ({
+    .map(year => {
+      return carTypes.Results.map(car => ({
         makeId: car.MakeId.toString(),
         year: year.toString(),
       }));

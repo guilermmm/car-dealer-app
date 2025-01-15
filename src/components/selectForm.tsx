@@ -28,7 +28,7 @@ export default function SelectForm({ carTypes }: { carTypes: CarTypes }) {
             <SelectValue placeholder="Select make" />
           </SelectTrigger>
           <SelectContent position="popper">
-            {carTypes.Results.map((car) => (
+            {carTypes.Results.map(car => (
               <SelectItem key={car.MakeId} value={car.MakeId.toString()}>
                 {car.MakeName}
               </SelectItem>
@@ -43,7 +43,7 @@ export default function SelectForm({ carTypes }: { carTypes: CarTypes }) {
             <SelectValue placeholder="Select year" />
           </SelectTrigger>
           <SelectContent position="popper">
-            {getYears().map((year) => (
+            {getYears().map(year => (
               <SelectItem key={year} value={year.toString()}>
                 {year}
               </SelectItem>

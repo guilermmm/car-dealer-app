@@ -10,7 +10,7 @@ export default async function CarList({
   year: string;
 }) {
   const cars = await getCarsByModelAndYear(makeId, year)
-    .then((res) => res.json())
+    .then(res => res.json())
     .catch(() => {
       return null;
     });
