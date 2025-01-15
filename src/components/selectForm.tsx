@@ -57,6 +57,7 @@ export default function SelectForm({ carTypes }: { carTypes: CarTypes }) {
           onClick={() =>
             router.push(`/result/${selectedMakeId}/${selectedYear}`)
           }
+          disabled={!selectedMakeId || !selectedYear}
         >
           Next
         </Button>

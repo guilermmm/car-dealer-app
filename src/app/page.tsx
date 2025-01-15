@@ -13,8 +13,8 @@ export default async function Home() {
   const carTypes = await getCarTypes().json();
 
   return (
-    <div className="flex justify-center items-center min-h-screen min-w-full">
-      <Card className="w-1/2">
+    <div className="flex justify-center items-center min-h-screen min-w-full px-10">
+      <Card className="lg:w-2/3 w-full my-8">
         <CardHeader>
           <CardTitle className="flex justify-center">Car Dealer App</CardTitle>
           <CardDescription className="text-center">
