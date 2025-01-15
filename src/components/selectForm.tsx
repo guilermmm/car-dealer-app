@@ -12,7 +12,7 @@ import {
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { CarTypes, CarModel } from "@/lib/service";
+import { CarTypes } from "@/lib/service";
 
 export default function SelectForm({ carTypes }: { carTypes: CarTypes }) {
   const router = useRouter();
